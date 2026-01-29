@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lcp.org/schemas/agent-request.json",
+  "title": "LCP Context Request",
+  "description": "Specifies what context an agent needs and under what terms it is willing to transact",
+  "type": "object",
+  "required": [
+    "request_id",
+    "consumer",
+    "capability_id",
+    "parameters",
+    "terms",
+    "metadata"
+  ],
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "description": "Unique request identifier"
+    },
+    "consumer": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^did:",
+          "description": "DID of the requesting agent"
+        },
+        "reputation": {
+          "type": "object",
+          "properties": {
+            "registry": {
+              "type": "string"
+            },
+            "score": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            }
+          }
+        }
+      }
+    },
+    "capability_id": {
+      "type": "string",
+      "description": "References provider's capability"
+    },
+    "parameters": {
+      "type": "object",
+      "description": "Capability-specific query parameters"
+    },
+    "requirements": {
+      "type": "object",
+      "description": "Performance constraints",
+      "properties": {
+        "max_latency_ms": {
+          "type": "number",
+          "minimum": 0
+        },
+        "min_freshness_ms": {
+          "type": "number",
+          "minimum": 0
+        },
+        "quality_threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "terms": {
+      "type": "object",
+      "required": ["max_price"],
+      "properties": {
+        "max_price": {
+          "type": "object",
+          "required": ["amount", "currency"],
+          "properties": {
+            "amount": {
+              "type": "number",
+              "minimum": 0
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        },
+        "settlement": {
+          "type": "object",
+          "properties": {
+            "chain": {
+              "type": "string"
+            },
+            "escrow_address": {
+              "type": "string"
+            },
+            "release_condition": {
+              "type": "string",
+              "enum": ["on_verification", "on_delivery", "on_timeout"]
+            }
+          }
+        }
+      }
+    },
+    "verification_requirements": {
+      "type": "object",
+      "properties": {
+        "provenance_proof_required": {
+          "type": "boolean"
+        },
+        "timestamp_verification": {
+          "type": "boolean"
+        },
+        "quality_attestation": {
+          "type": "boolean"
+        }
+      }
+    },
+    "negotiation_preferences": {
+      "type": "object",
+      "properties": {
+        "max_rounds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "timeout_seconds": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "priority": {
+          "type": "object",
+          "properties": {
+            "price": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "latency": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "quality": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["timestamp", "nonce"],
+      "properties": {
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "expires_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "nonce": {
+          "type": "string",
+          "description": "Replay attack prevention"
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "patternProperties": {
+    "^x_": {
+      "description": "Custom extension fields must be prefixed with x_"
+    }
+  }
+}

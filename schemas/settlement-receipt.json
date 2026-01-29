@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lcp.org/schemas/settlement-receipt.json",
+  "title": "LCP Settlement Receipt",
+  "description": "Confirmation of payment settlement, proving transaction completion",
+  "type": "object",
+  "required": [
+    "receipt_id",
+    "request_id",
+    "settlement",
+    "parties",
+    "amount",
+    "metadata"
+  ],
+  "properties": {
+    "receipt_id": {
+      "type": "string",
+      "description": "Unique receipt identifier"
+    },
+    "request_id": {
+      "type": "string",
+      "description": "Links to original request"
+    },
+    "response_id": {
+      "type": "string",
+      "description": "Links to context response"
+    },
+    "settlement": {
+      "type": "object",
+      "required": ["chain", "transaction_hash"],
+      "properties": {
+        "chain": {
+          "type": "string",
+          "description": "Settlement blockchain/network"
+        },
+        "transaction_hash": {
+          "type": "string",
+          "description": "On-chain transaction reference"
+        },
+        "block_number": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "block_hash": {
+          "type": "string"
+        },
+        "confirmations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "finality_status": {
+          "type": "string",
+          "enum": ["pending", "confirmed", "finalized"]
+        }
+      }
+    },
+    "parties": {
+      "type": "object",
+      "required": ["payer", "payer_address", "payee", "payee_address"],
+      "properties": {
+        "payer": {
+          "type": "string",
+          "pattern": "^did:",
+          "description": "Consumer DID"
+        },
+        "payer_address": {
+          "type": "string",
+          "description": "On-chain address of payer"
+        },
+        "payee": {
+          "type": "string",
+          "pattern": "^did:",
+          "description": "Provider DID"
+        },
+        "payee_address": {
+          "type": "string",
+          "description": "On-chain address of payee"
+        }
+      }
+    },
+    "amount": {
+      "type": "object",
+      "required": ["amount", "currency"],
+      "properties": {
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "currency": {
+          "type": "string"
+        },
+        "token_address": {
+          "type": "string",
+          "description": "Smart contract address for token payments"
+        }
+      }
+    },
+    "settlement_type": {
+      "type": "string",
+      "enum": ["atomic_swap", "escrow_release", "htlc", "direct_transfer", "lightning", "payment_channel"]
+    },
+    "escrow_released": {
+      "type": "boolean"
+    },
+    "verification_passed": {
+      "type": "boolean"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["settled_at"],
+      "properties": {
+        "settled_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "settlement_latency_ms": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "patternProperties": {
+    "^x_": {
+      "description": "Custom extension fields must be prefixed with x_"
+    }
+  }
+}

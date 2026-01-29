@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lcp.org/schemas/provider-capability.json",
+  "title": "LCP Provider Capability Descriptor",
+  "description": "Describes what context a provider can deliver, under what conditions, and with what guarantees",
+  "type": "object",
+  "required": [
+    "provider",
+    "capabilities",
+    "metadata"
+  ],
+  "properties": {
+    "provider": {
+      "type": "object",
+      "required": ["id", "endpoints"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^did:",
+          "description": "Decentralized identifier (DID) for the provider"
+        },
+        "name": {
+          "type": "string",
+          "description": "Human-readable provider name"
+        },
+        "endpoints": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["protocol", "url"],
+            "properties": {
+              "protocol": {
+                "type": "string",
+                "enum": ["https", "http", "wss", "ws", "p2p"]
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "transport": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["http", "websocket", "grpc", "p2p"]
+                }
+              }
+            }
+          }
+        },
+        "reputation": {
+          "type": "object",
+          "properties": {
+            "registry": {
+              "type": "string",
+              "description": "Address of reputation registry contract"
+            },
+            "score": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "transactions": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "uptime": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        }
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "schema", "pricing"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique capability identifier"
+          },
+          "type": {
+            "type": "string",
+            "description": "Capability type (domain-specific)"
+          },
+          "description": {
+            "type": "string"
+          },
+          "schema": {
+            "type": "object",
+            "required": ["format"],
+            "properties": {
+              "format": {
+                "type": "string",
+                "enum": ["json", "protobuf", "avro", "msgpack", "custom"]
+              },
+              "specification": {
+                "type": "string",
+                "format": "uri",
+                "description": "URL to schema specification"
+              }
+            }
+          },
+          "coverage": {
+            "type": "object",
+            "description": "Domain-specific coverage information"
+          },
+          "guarantees": {
+            "type": "object",
+            "properties": {
+              "latency_ms": {
+                "type": "number",
+                "minimum": 0
+              },
+              "availability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "freshness_max_age_ms": {
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          },
+          "pricing": {
+            "type": "object",
+            "required": ["model", "base_price"],
+            "properties": {
+              "model": {
+                "type": "string",
+                "enum": ["pay_per_query", "subscription", "metered", "tiered", "auction"]
+              },
+              "base_price": {
+                "type": "object",
+                "required": ["amount", "currency"],
+                "properties": {
+                  "amount": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                }
+              },
+              "volume_discounts": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["threshold", "discount_percent"],
+                  "properties": {
+                    "threshold": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "discount_percent": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 100
+                    }
+                  }
+                }
+              },
+              "negotiable": {
+                "type": "boolean"
+              }
+            }
+          },
+          "verification": {
+            "type": "object",
+            "properties": {
+              "provenance_proof": {
+                "type": "string",
+                "enum": ["cryptographic_signature", "merkle_tree", "zero_knowledge_proof", "tee_attestation"]
+              },
+              "timestamp_source": {
+                "type": "string",
+                "enum": ["trusted_timestamping_authority", "blockchain_anchor", "vdf"]
+              },
+              "quality_attestation": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "terms": {
+      "type": "object",
+      "properties": {
+        "min_commitment_period_days": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cancellation_notice_hours": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "settlement": {
+          "type": "object",
+          "properties": {
+            "supported_chains": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "settlement_delay_blocks": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "escrow_required": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["published_at"],
+      "properties": {
+        "published_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "expires_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "patternProperties": {
+    "^x_": {
+      "description": "Custom extension fields must be prefixed with x_"
+    }
+  }
+}

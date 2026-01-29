@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lcp.org/schemas/context-metadata.json",
+  "title": "LCP Context Response Metadata",
+  "description": "Metadata and verification proofs for delivered context",
+  "type": "object",
+  "required": [
+    "response_id",
+    "request_id",
+    "provider_id",
+    "data",
+    "provenance",
+    "metadata"
+  ],
+  "properties": {
+    "response_id": {
+      "type": "string",
+      "description": "Unique response identifier"
+    },
+    "request_id": {
+      "type": "string",
+      "description": "References original request"
+    },
+    "provider_id": {
+      "type": "string",
+      "pattern": "^did:",
+      "description": "DID of provider"
+    },
+    "data": {
+      "type": "object",
+      "required": ["format", "content"],
+      "properties": {
+        "format": {
+          "type": "string"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri"
+        },
+        "content": {
+          "description": "The actual context payload"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "Original data source"
+        },
+        "chain_of_custody": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["entity", "timestamp", "signature"],
+            "properties": {
+              "entity": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string",
+                "enum": ["original_source", "aggregator", "enricher", "transformer"]
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "data_hash": {
+                "type": "string"
+              },
+              "signature": {
+                "type": "string"
+              },
+              "transformation": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "properties": {
+        "merkle_root": {
+          "type": "string"
+        },
+        "merkle_proof": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "timestamp_proof": {
+          "type": "object",
+          "properties": {
+            "authority": {
+              "type": "string",
+              "format": "uri"
+            },
+            "timestamp": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "signature": {
+              "type": "string"
+            }
+          }
+        },
+        "signature": {
+          "type": "object",
+          "properties": {
+            "algorithm": {
+              "type": "string",
+              "enum": ["ES256K", "EdDSA", "RSA-PSS"]
+            },
+            "signer": {
+              "type": "string"
+            },
+            "public_key": {
+              "type": "string"
+            },
+            "signature_value": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "quality_metrics": {
+      "type": "object",
+      "properties": {
+        "completeness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "freshness_ms": {
+          "type": "number",
+          "minimum": 0
+        },
+        "latency_ms": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "settlement_reference": {
+      "type": "object",
+      "properties": {
+        "chain": {
+          "type": "string"
+        },
+        "transaction_hash": {
+          "type": "string"
+        },
+        "escrow_address": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "object",
+          "required": ["amount", "currency"],
+          "properties": {
+            "amount": {
+              "type": "number",
+              "minimum": 0
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["timestamp"],
+      "properties": {
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "patternProperties": {
+    "^x_": {
+      "description": "Custom extension fields must be prefixed with x_"
+    }
+  }
+}
