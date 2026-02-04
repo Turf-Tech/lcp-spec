@@ -13,7 +13,7 @@ Draft
 
 ## Authors
 
-@turf_network
+Turf Tech Research Team
 
 ## Table of Contents
 

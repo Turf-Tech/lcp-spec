@@ -292,9 +292,9 @@ We'll measure success by:
 
 - **GitHub Releases**: Subscribe to release notifications
 - **Changelog**: Review [CHANGELOG.md](./CHANGELOG.md)
-- **Discussions**: Follow [GitHub Discussions](https://github.com/turf_network/lcp-spec/discussions)
+- **Discussions**: Follow [GitHub Discussions](https://github.com/Turf-Tech/lcp-spec/discussions)
 - **Blog**: (Coming soon) LCP development blog
-- **Social**: Follow @turf_network on Twitter/X
+- **Social**: Follow [@Turf-Tech](https://github.com/Turf-Tech) on GitHub
 
 ---
 

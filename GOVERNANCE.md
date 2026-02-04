@@ -71,7 +71,7 @@ LCP governance is guided by these core principles:
 **Definition**: Long-term committers who guide the protocol's direction and make final decisions on contentious issues
 
 **Current Core Maintainers**:
-- @turf_network (Founding Maintainer)
+- Turf Tech Research Team (Founding Maintainers)
 - [Additional maintainers to be appointed as project matures]
 
 **Responsibilities**:
@@ -439,7 +439,7 @@ Private matters are disclosed to the community as appropriate once resolved.
 **Governance Questions**: Email maintainers@lcp.org (if available)
 
 **Core Maintainers**:
-- @turf_network
+- Turf Tech Research Team ([@Turf-Tech](https://github.com/Turf-Tech))
 
 ---
 

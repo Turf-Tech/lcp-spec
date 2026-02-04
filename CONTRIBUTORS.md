@@ -10,7 +10,7 @@ This document recognizes individuals and organizations who have contributed to t
 
 Core maintainers guide the protocol's direction and make final decisions on contentious issues.
 
-- **[@turf_network](https://github.com/turf_network)** - Founding Maintainer
+- **[Turf Tech Research Team](https://github.com/Turf-Tech)** - Founding Maintainers
   - 📐 Initial specification design
   - ⚖️ Governance structure
   - 🌐 Community building
@@ -38,7 +38,7 @@ We recognize all contributors, regardless of the size of their contribution. Eve
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/turf_network"><img src="https://github.com/turf_network.png?s=100" width="100px;" alt="Turf Network"/><br /><sub><b>Turf Network</b></sub></a><br /><a href="#code-turf_network" title="Code">💻</a> <a href="#doc-turf_network" title="Documentation">📖</a> <a href="#design-turf_network" title="Design">🎨</a> <a href="#ideas-turf_network" title="Ideas & Planning">🤔</a> <a href="#infra-turf_network" title="Infrastructure">🚇</a> <a href="#maintenance-turf_network" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Turf-Tech"><img src="https://github.com/Turf-Tech.png?s=100" width="100px;" alt="Turf Tech"/><br /><sub><b>Turf Tech</b></sub></a><br /><a href="#code-Turf-Tech" title="Code">💻</a> <a href="#doc-Turf-Tech" title="Documentation">📖</a> <a href="#design-Turf-Tech" title="Design">🎨</a> <a href="#ideas-Turf-Tech" title="Ideas & Planning">🤔</a> <a href="#infra-Turf-Tech" title="Infrastructure">🚇</a> <a href="#maintenance-Turf-Tech" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>

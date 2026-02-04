@@ -210,7 +210,7 @@ Replace these placeholders throughout the docs:
 
 ```bash
 # Find and replace:
-turf_network → your-github-username
+Turf-Tech → your-github-username
 lcp-spec → your-repo-name
 security@lcp.org → your-security-email
 hello@lcp.org → your-general-email
@@ -286,9 +286,9 @@ Currently showing:
 ### Additional Metrics (Add These)
 
 ```markdown
-![Downloads](https://img.shields.io/github/downloads/turf_network/lcp-spec/total)
-![Release](https://img.shields.io/github/v/release/turf_network/lcp-spec)
-![Code Size](https://img.shields.io/github/languages/code-size/turf_network/lcp-spec)
+![Downloads](https://img.shields.io/github/downloads/Turf-Tech/lcp-spec/total)
+![Release](https://img.shields.io/github/v/release/Turf-Tech/lcp-spec)
+![Code Size](https://img.shields.io/github/languages/code-size/Turf-Tech/lcp-spec)
 ```
 
 ## 🤝 Using the Contributor System
@@ -401,6 +401,6 @@ All visual and automation features are documented in:
 
 **Created**: 2026-01-29
 **For**: LCP v0.1.0
-**Maintained by**: @turf_network
+**Maintained by**: @Turf-Tech
 
 🎉 **Your repository is now visually enhanced and automated!**

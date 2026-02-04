@@ -2,8 +2,7 @@
 
 <div align="center">
 
-![LCP Logo](https://via.placeholder.com/200x200/6366f1/ffffff?text=LCP)
-<!-- Replace with actual logo when available -->
+![LCP Logo](./assets/logos/lcp-logo.svg)
 
 **The meta-layer specification for autonomous AI context orchestration**
 
@@ -15,15 +14,15 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=for-the-badge)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[![GitHub stars](https://img.shields.io/github/stars/turf_network/lcp-spec?style=social)](https://github.com/turf_network/lcp-spec/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/turf_network/lcp-spec?style=social)](https://github.com/turf_network/lcp-spec/network/members)
-[![GitHub watchers](https://img.shields.io/github/watchers/turf_network/lcp-spec?style=social)](https://github.com/turf_network/lcp-spec/watchers)
+[![GitHub stars](https://img.shields.io/github/stars/Turf-Tech/lcp-spec?style=social)](https://github.com/Turf-Tech/lcp-spec/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Turf-Tech/lcp-spec?style=social)](https://github.com/Turf-Tech/lcp-spec/network/members)
+[![GitHub watchers](https://img.shields.io/github/watchers/Turf-Tech/lcp-spec?style=social)](https://github.com/Turf-Tech/lcp-spec/watchers)
 
 [📖 Documentation](#documentation) •
 [🚀 Quick Start](#quick-start) •
 [🤝 Contributing](#community) •
 [🗺️ Roadmap](./ROADMAP.md) •
-[💬 Discussions](https://github.com/turf_network/lcp-spec/discussions)
+[💬 Discussions](https://github.com/Turf-Tech/lcp-spec/discussions)
 
 </div>
 
@@ -264,7 +263,7 @@ If you reference LCP in academic work, please cite:
   title={Liquid Context Protocol: A Meta-Layer for Autonomous AI Context Orchestration},
   author={Turf Network},
   year={2026},
-  url={https://github.com/turf_network/lcp-spec}
+  url={https://github.com/Turf-Tech/lcp-spec}
 }
 ```
 
@@ -280,7 +279,7 @@ Special thanks to all [contributors](./CONTRIBUTORS.md) who have helped shape th
 
 ---
 
-**Questions?** Open a [discussion](https://github.com/turf_network/lcp-spec/discussions) or read the [FAQ](./docs/FAQ.md) (coming soon).
+**Questions?** Open a [discussion](https://github.com/Turf-Tech/lcp-spec/discussions) or read the [FAQ](./docs/FAQ.md) (coming soon).
 
 **Security Issue?** Please report responsibly to security@lcp.org or via [private disclosure](#).
 
@@ -290,10 +289,10 @@ Special thanks to all [contributors](./CONTRIBUTORS.md) who have helped shape th
 
 <div align="center">
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/turf_network/lcp-spec?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/turf_network/lcp-spec?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/turf_network/lcp-spec?style=flat-square)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/turf_network/lcp-spec?style=flat-square)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Turf-Tech/lcp-spec?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/Turf-Tech/lcp-spec?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/Turf-Tech/lcp-spec?style=flat-square)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Turf-Tech/lcp-spec?style=flat-square)
 
 </div>
 
