@@ -1,0 +1,138 @@
+# Issue and PR Labels for LCP Specification
+# Format: name, color, description
+
+# Type labels
+- name: bug
+  color: 'd73a4a'
+  description: 'Something isn't right in the specification'
+
+- name: enhancement
+  color: 'a2eeef'
+  description: 'New feature or request for the specification'
+
+- name: documentation
+  color: '0075ca'
+  description: 'Improvements or additions to documentation'
+
+- name: rfc
+  color: 'fbca04'
+  description: 'Request for Comments - significant protocol changes'
+
+- name: question
+  color: 'd876e3'
+  description: 'Question about the specification'
+
+# Priority labels
+- name: priority:critical
+  color: 'b60205'
+  description: 'Critical priority - needs immediate attention'
+
+- name: priority:high
+  color: 'd93f0b'
+  description: 'High priority'
+
+- name: priority:medium
+  color: 'fbca04'
+  description: 'Medium priority'
+
+- name: priority:low
+  color: '0e8a16'
+  description: 'Low priority'
+
+# Status labels
+- name: status:blocked
+  color: 'b60205'
+  description: 'Blocked by dependencies or other issues'
+
+- name: status:in-progress
+  color: 'fbca04'
+  description: 'Currently being worked on'
+
+- name: status:needs-review
+  color: '0e8a16'
+  description: 'Needs review from maintainers'
+
+- name: status:awaiting-response
+  color: 'fef2c0'
+  description: 'Awaiting response from author'
+
+# Component labels
+- name: component:discovery
+  color: 'c5def5'
+  description: 'Related to discovery protocol'
+
+- name: component:negotiation
+  color: 'c5def5'
+  description: 'Related to negotiation protocol'
+
+- name: component:verification
+  color: 'c5def5'
+  description: 'Related to verification protocol'
+
+- name: component:settlement
+  color: 'c5def5'
+  description: 'Related to settlement protocol'
+
+- name: component:trust-model
+  color: 'c5def5'
+  description: 'Related to trust and reputation'
+
+- name: component:extensions
+  color: 'c5def5'
+  description: 'Related to protocol extensions'
+
+# Contribution labels
+- name: good-first-issue
+  color: '7057ff'
+  description: 'Good for newcomers'
+
+- name: help-wanted
+  color: '008672'
+  description: 'Extra attention is needed'
+
+- name: breaking-change
+  color: 'b60205'
+  description: 'Breaking change to existing protocol'
+
+- name: backwards-compatible
+  color: '0e8a16'
+  description: 'Backwards compatible change'
+
+# Special labels
+- name: security
+  color: 'b60205'
+  description: 'Security-related issue'
+
+- name: wontfix
+  color: 'ffffff'
+  description: 'This will not be worked on'
+
+- name: duplicate
+  color: 'cfd3d7'
+  description: 'This issue or pull request already exists'
+
+- name: invalid
+  color: 'e4e669'
+  description: 'This doesn't seem right'
+
+- name: discussion
+  color: 'cc317c'
+  description: 'Requires further discussion'
+
+# Research labels
+- name: research:needed
+  color: 'f9d0c4'
+  description: 'Requires additional research'
+
+- name: research:academic
+  color: 'f9d0c4'
+  description: 'Related to academic research'
+
+# Automation labels
+- name: dependencies
+  color: '0366d6'
+  description: 'Pull requests that update dependencies'
+
+- name: automated
+  color: 'ededed'
+  description: 'Created by automation/bots'

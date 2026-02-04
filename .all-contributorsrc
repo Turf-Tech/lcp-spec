@@ -1,0 +1,64 @@
+{
+  "projectName": "lcp-spec",
+  "projectOwner": "Turf-Tech",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "CONTRIBUTORS.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "Turf-Tech",
+      "name": "Turf Tech",
+      "avatar_url": "https://github.com/Turf-Tech.png",
+      "profile": "https://github.com/Turf-Tech",
+      "contributions": [
+        "code",
+        "doc",
+        "design",
+        "ideas",
+        "infra",
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": false,
+  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg?style=flat-square)](#contributors-)",
+  "contributorTemplate": "<a href=\"<%= contributor.profile %>\"><img src=\"<%= contributor.avatar_url %>\" width=\"<%= options.imageSize %>px;\" alt=\"<%= contributor.name %>\"/><br /><sub><b><%= contributor.name %></b></sub></a>",
+  "types": {
+    "code": {
+      "symbol": "💻",
+      "description": "Code",
+      "link": "[<%= symbol %>](<%= url %> \"Code\")"
+    },
+    "doc": {
+      "symbol": "📖",
+      "description": "Documentation",
+      "link": "[<%= symbol %>](<%= url %> \"Documentation\")"
+    },
+    "design": {
+      "symbol": "🎨",
+      "description": "Design",
+      "link": "[<%= symbol %>](<%= url %> \"Design\")"
+    },
+    "ideas": {
+      "symbol": "🤔",
+      "description": "Ideas & Planning",
+      "link": "[<%= symbol %>](<%= url %> \"Ideas & Planning\")"
+    },
+    "infra": {
+      "symbol": "🚇",
+      "description": "Infrastructure",
+      "link": "[<%= symbol %>](<%= url %> \"Infrastructure\")"
+    },
+    "maintenance": {
+      "symbol": "🚧",
+      "description": "Maintenance",
+      "link": "[<%= symbol %>](<%= url %> \"Maintenance\")"
+    }
+  }
+}

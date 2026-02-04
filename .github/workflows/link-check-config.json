@@ -1,0 +1,14 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^http://localhost"
+    },
+    {
+      "pattern": "^https://via.placeholder.com"
+    }
+  ],
+  "aliveStatusCodes": [200, 206, 301, 302, 307, 308, 403],
+  "timeout": "20s",
+  "retryOn429": true,
+  "retryCount": 3
+}
