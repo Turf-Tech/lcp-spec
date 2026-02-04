@@ -1,0 +1,11 @@
+<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+  <rect width="60" height="60" fill="#627EEA" rx="8"/>
+  <!-- Ethereum diamond shape -->
+  <g transform="translate(30, 30)">
+    <polygon points="0,-15 10,0 0,5 -10,0" fill="white" opacity="0.6"/>
+    <polygon points="0,-15 10,0 0,15" fill="white" opacity="0.8"/>
+    <polygon points="0,-15 -10,0 0,15" fill="white" opacity="0.4"/>
+    <polygon points="0,5 10,0 0,15" fill="white"/>
+    <polygon points="0,5 -10,0 0,15" fill="white" opacity="0.6"/>
+  </g>
+</svg>

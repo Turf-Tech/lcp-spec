@@ -330,12 +330,12 @@ See [CONTRIBUTORS.md](./CONTRIBUTORS.md) for the full list of contributors.
 <sub>Model Context Protocol</sub>
 </td>
 <td align="center" width="25%">
-<img src="https://www.gstatic.com/devrel-devsite/prod/v2210deb8920cd4a55bd580441aa58e7853afc04c39a9d9ac4198e1cd7fbe04ef/developers/images/opengraph/google-blue.png" width="60"><br>
+<img src="./assets/logos/google-logo.svg" width="60"><br>
 <b>Google</b><br>
 <sub>Agent2Agent Protocol</sub>
 </td>
 <td align="center" width="25%">
-<img src="https://ethereum.org/static/6b935ac0e6194247347855dc3d328e83/6ed5f/eth-diamond-black.webp" width="60"><br>
+<img src="./assets/logos/ethereum-logo.svg" width="60"><br>
 <b>Ethereum</b><br>
 <sub>ERC-8004 Standard</sub>
 </td>

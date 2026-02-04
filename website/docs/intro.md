@@ -33,14 +33,14 @@ LCP provides four core primitives:
 
 To learn more about LCP, explore the following sections:
 
-- [Architecture](./02-architecture.md) - High-level architecture overview
-- [Core Components](./03-core-components.md) - Detailed component specifications
-- [Discovery Protocol](./04-discovery.md) - How agents find context providers
-- [Negotiation Protocol](./05-negotiation.md) - Autonomous term negotiation
-- [Verification Protocol](./06-verification.md) - Data provenance and quality proofs
-- [Settlement Protocol](./07-settlement.md) - Payment and dispute resolution
-- [Trust Model](./08-trust-model.md) - Security and trust assumptions
-- [Extensions](./09-extensions.md) - Optional protocol extensions
+- [Architecture](./architecture) - High-level architecture overview
+- [Core Components](./core-components) - Detailed component specifications
+- [Discovery Protocol](./discovery) - How agents find context providers
+- [Negotiation Protocol](./negotiation) - Autonomous term negotiation
+- [Verification Protocol](./verification) - Data provenance and quality proofs
+- [Settlement Protocol](./settlement) - Payment and dispute resolution
+- [Trust Model](./trust-model) - Security and trust assumptions
+- [Extensions](./extensions) - Optional protocol extensions
 
 ## Quick Links
 
