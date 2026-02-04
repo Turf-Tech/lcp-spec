@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="32" cy="32" r="30" fill="#6366f1" stroke="#4f46e5" stroke-width="1.5"/>
+
+  <!-- Liquid wave effect -->
+  <path d="M 10 32 Q 16 26, 22 32 T 34 32 T 46 32 T 54 32"
+        fill="none" stroke="#a5b4fc" stroke-width="2" opacity="0.6"/>
+  <path d="M 10 36 Q 16 30, 22 36 T 34 36 T 46 36 T 54 36"
+        fill="none" stroke="#a5b4fc" stroke-width="2" opacity="0.4"/>
+
+  <!-- LCP Text -->
+  <text x="32" y="38" font-family="Arial, sans-serif" font-size="18" font-weight="bold"
+        fill="white" text-anchor="middle">LCP</text>
+</svg>

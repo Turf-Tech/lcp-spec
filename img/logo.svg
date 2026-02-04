@@ -1,0 +1,30 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="95" fill="#6366f1" stroke="#4f46e5" stroke-width="2"/>
+
+  <!-- Liquid wave effect -->
+  <path d="M 30 100 Q 50 80, 70 100 T 110 100 T 150 100 T 170 100"
+        fill="none" stroke="#a5b4fc" stroke-width="3" opacity="0.6"/>
+  <path d="M 30 110 Q 50 90, 70 110 T 110 110 T 150 110 T 170 110"
+        fill="none" stroke="#a5b4fc" stroke-width="3" opacity="0.4"/>
+
+  <!-- LCP Text -->
+  <text x="100" y="95" font-family="Arial, sans-serif" font-size="48" font-weight="bold"
+        fill="white" text-anchor="middle">LCP</text>
+
+  <!-- Subtitle -->
+  <text x="100" y="130" font-family="Arial, sans-serif" font-size="12"
+        fill="#e0e7ff" text-anchor="middle">Liquid Context Protocol</text>
+
+  <!-- Network nodes (representing distributed nature) -->
+  <circle cx="50" cy="50" r="4" fill="#ffffff" opacity="0.8"/>
+  <circle cx="150" cy="50" r="4" fill="#ffffff" opacity="0.8"/>
+  <circle cx="50" cy="150" r="4" fill="#ffffff" opacity="0.8"/>
+  <circle cx="150" cy="150" r="4" fill="#ffffff" opacity="0.8"/>
+
+  <!-- Connection lines -->
+  <line x1="50" y1="50" x2="100" y2="70" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <line x1="150" y1="50" x2="100" y2="70" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <line x1="50" y1="150" x2="100" y2="130" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <line x1="150" y1="150" x2="100" y2="130" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+</svg>
